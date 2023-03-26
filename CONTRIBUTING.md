@@ -1,4 +1,4 @@
-# Contributing to the Stats Package
+# Contributing to the Statistics Package
 
 Thank you for your interest in contributing to this Go package! Here are some guidelines to help you get started.
 
