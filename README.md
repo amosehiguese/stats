@@ -17,17 +17,17 @@ package main
 
 import (
   "fmt"
-  "github.com/amosehiguese/stats"
+  stats "github.com/amosehiguese/stats/descriptive"
 )
 
 func main() {
   dataSet := []float64{1.0, 3.0, 5.0}
   result := stats.Mean(dataSet)
-  fmt.Printf("The mean is :%.2f\n", result)
+  fmt.Printf("The mean is : %.2f\n", result)
 }
 ```
 
-This would output `4.50`, which is the mean of the data set.
+This would output `3.00`, which is the mean of the data set.
 
 ## Contributing
 
