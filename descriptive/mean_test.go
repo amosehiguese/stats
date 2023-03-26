@@ -3,7 +3,7 @@ package descriptive
 import "testing"
 
 func TestMean(t *testing.T) {
-    data := []float64{1.0, 3.0, 5.0}
+    data := []float64{1.0, 3.0, 5.0, 7.0}
     expected := 3.0
     result := Mean(data)
     if result != expected {
