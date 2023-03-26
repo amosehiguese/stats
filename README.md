@@ -31,7 +31,7 @@ This would output `4.50`, which is the mean of the data set.
 
 ## Contributing
 
-If you'd like to contribute to this package, please see the [CONTRIBUTING.md](https://github.com/amosehiguese/stats/CONTRIBUTING.md) file for guidelines
+If you'd like to contribute to this package, please see the [CONTRIBUTING.md](https://github.com/amosehiguese/stats/blob/main/CONTRIBUTING.md) file for guidelines
 
 ## License
 
