@@ -4,11 +4,8 @@ This is a Go package for performing statistical calculations, such as calculatin
 
 ## Installation
 
-To use this package in your own Go project, you can add it as a dependency in your `go.mod` file
-
 ```
 go get github.com/amosehiguese/stats
-
 ```
 
 ## Usage
