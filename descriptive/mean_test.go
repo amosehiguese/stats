@@ -1,6 +1,9 @@
 package descriptive
 
-import "testing"
+import (
+	"math"
+	"testing"
+)
 
 const (
     checkMark = "\u2713"
@@ -12,7 +15,7 @@ func TestMean(t *testing.T) {
     expected := 4.0
     result := Mean(data)
 
-    t.Log("\t\tGiven the need to test Mean.")
+    t.Log("Given the need to test Mean.")
     {
 
         if result != expected {
@@ -24,10 +27,14 @@ func TestMean(t *testing.T) {
 
 func TestMeanEmptyList(t *testing.T) {
     data := []float64{}
-    expected := 0.0
+    expected := math.NaN()
     result := Mean(data)
-    if result != expected {
-        t.Errorf("Mean of %v was incorrect, got: %v, want: %v.", data, result, expected)
+    t.Log("Given the need to test Mean for an empty slice.")
+    {
+        if math.IsNaN(result) != math.IsNaN(expected) {
+            t.Fatalf("Mean of %v was incorrect, got: %v, want: %v. %v", data, result, expected, ballotX)
+        }
+        t.Log("\t\tShould be able to get expected mean.", checkMark)
     }
 }
 
@@ -35,7 +42,11 @@ func TestMeanSingleValue(t *testing.T) {
     data := []float64{42.0}
     expected := 42.0
     result := Mean(data)
-    if result != expected {
-        t.Errorf("Mean of %v was incorrect, got: %v, want: %v.", data, result, expected)
+    t.Log("Given the need to test Mean for a slice of 1 element.")
+    {
+        if result != expected {
+            t.Fatalf("Mean of %v was incorrect, got: %v, want: %v. %v", data, result, expected, ballotX)
+        }
+        t.Log("\t\tShould be able to get expected mean.", checkMark)        
     }
 }
