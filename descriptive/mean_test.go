@@ -1,7 +1,6 @@
 package descriptive
 
 import (
-	"math"
 	"testing"
 )
 
@@ -13,7 +12,7 @@ const (
 func TestMean(t *testing.T) {
     data := []float64{1.0, 3.0, 5.0, 7.0}
     expected := 4.0
-    result := Mean(data)
+    result, _ := Mean(data)
 
     t.Log("Given the need to test Mean.")
     {
@@ -27,11 +26,11 @@ func TestMean(t *testing.T) {
 
 func TestMeanEmptyList(t *testing.T) {
     data := []float64{}
-    expected := math.NaN()
-    result := Mean(data)
+    expected := 0.0
+    result, _ := Mean(data)
     t.Log("Given the need to test Mean for an empty slice.")
     {
-        if math.IsNaN(result) != math.IsNaN(expected) {
+        if result != expected {
             t.Fatalf("Mean of %v was incorrect, got: %v, want: %v. %v", data, result, expected, ballotX)
         }
         t.Log("\t\tShould be able to get expected mean.", checkMark)
@@ -41,7 +40,7 @@ func TestMeanEmptyList(t *testing.T) {
 func TestMeanSingleValue(t *testing.T) {
     data := []float64{42.0}
     expected := 42.0
-    result := Mean(data)
+    result,_ := Mean(data)
     t.Log("Given the need to test Mean for a slice of 1 element.")
     {
         if result != expected {
