@@ -7,7 +7,7 @@ import (
 // Median returns the median value of a slice of float64
 func Median(data []float64) float64 {
 	if len(data) == 0 {
-		return 0
+		return 0.0
 	}
 
 	// Check if data are not sorted
